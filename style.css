@@ -1,0 +1,141 @@
+* {
+    margin:0;
+    padding:0;
+
+    --white:hsl(0deg 0% 100%);
+    --green:hsl(179deg 63% 43%);
+    --lightgreen:hsl(180deg 47% 52%);
+    --lime:hsl(71deg 73% 54%);
+    --gray:hsl(221deg 8% 68%);
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color:hsl(207deg 47% 93%);
+}
+
+
+.white {
+    color:var(--white);
+}
+.green {
+    color:var(--green);
+}
+.lime {
+    color:var(--lime);
+}
+.lightgreen {
+    color:var(--lightgreen);
+}
+.gray {
+    color:var(--gray);
+}
+
+.rem1 {
+    margin:1rem;
+}
+
+.container {
+    padding:1.5rem;
+    
+}
+
+.header {
+    background-color:var(--white);
+    border-radius:.5rem .5rem 0 0;
+}
+.header p {
+    line-height:1.5;
+    max-width:30ch;
+    margin-left:1rem;
+
+}
+
+.section-a {
+    background-color:var(--green);
+}
+.section-a div{
+    margin-left:1rem;
+}
+
+.section-a button {
+    background-color:var(--lime);
+    width:90%;
+    border:none;
+    display:block;
+    margin:1rem auto;
+    padding:1rem 0;
+    border-radius:.5rem;
+
+}
+.section-a h2 {
+    margin-left:1rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+.section-b {
+    background-color:var(--lightgreen);
+    padding:0 1rem;
+}
+.section-b h1 {
+    margin:1rem 0;
+}
+.section-b span {
+    color:var(--white);
+    display:block;
+}
+.section-b div {
+    margin-bottom:1.5rem;
+}
+
+@media screen and (max-width: 390px) {
+   .container {
+        display:grid;
+        grid-template-columns:1fr;
+   }
+   h1 {
+        font-size:1.3rem;
+   }
+   h2 {
+        font-size:1rem;
+   }
+    
+   .section-b {
+        border-radius:0 0 .5rem .5rem;
+   }
+}
+
+@media screen and (min-width: 391px) {
+    
+    .container {  
+        margin:10% auto;
+        display: grid;
+        max-width:700px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header header"
+            "section-a section-b";
+    }
+
+    .header { 
+        grid-area: header;
+        padding:2.5rem;
+    }
+
+    .section-a {
+        grid-area: section-a; 
+        border-radius:0 0 0 .5rem;
+        padding:2.5rem;
+    }
+
+    .section-b { 
+        grid-area: section-b;
+        background-color:var(--lightgreen);
+        padding:2.5rem;
+        border-radius:0 0 .5rem 0;
+    }
+}
