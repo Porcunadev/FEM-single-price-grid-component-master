@@ -34,7 +34,9 @@ body {
 .rem1 {
     margin:1rem;
 }
-
+.dollar {
+    font-size:1.8rem;
+}
 .container {
     padding:1.5rem;
     
@@ -72,6 +74,8 @@ body {
     margin-left:1rem;
     margin-top:1rem;
     margin-bottom:1rem;
+    font-size:1rem;
+    font-weight:400;
 }
 
 .section-b {
@@ -84,6 +88,7 @@ body {
 .section-b span {
     color:var(--white);
     display:block;
+    font-weight:400;
 }
 .section-b div {
     margin-bottom:1.5rem;
